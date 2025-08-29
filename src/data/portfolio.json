@@ -1,0 +1,151 @@
+{
+  "name": "Ritik Kumar",
+  "role": "Data Scientist | ML Engineer",
+  "location": "London, UK",
+  "contact": {
+    "email": "ritik2204.kumar@gmail.com",
+    "phone": "+44 7768010573",
+    "links": {
+      "linkedin": "https://linkedin.com/in/ritik2204",
+      "github": "https://github.com/ritik2204",
+      "kaggle": "",
+      "google_scholar": "",
+      "resume_pdf": "/resume.pdf"
+    }
+  },
+  "summary": "Lead Data Scientist & Co-founder with expertise in Python, SQL, TensorFlow, and MLOps. Delivered production ML solutions achieving 99.9% uptime, reduced deployment times by 71%, and improved model accuracy from 22% to 87% through advanced ensemble techniques.",
+  "skills": {
+    "programming": ["Python", "R", "SQL", "C++", "JavaScript"],
+    "ml": ["TensorFlow", "PyTorch", "Scikit-learn", "XGBoost", "LightGBM", "YOLO", "CLIP", "Transformers"],
+    "data": ["Pandas", "NumPy", "Apache Spark", "Hadoop", "Kafka", "Databricks"],
+    "viz": ["Matplotlib", "Seaborn", "Tableau", "Power BI"],
+    "cloud": ["AWS", "Azure", "Docker", "Kubernetes"],
+    "tools": ["Git", "CI/CD", "MLOps", "PostgreSQL", "MongoDB", "Redis"]
+  },
+  "projects": [
+    {
+      "title": "Hybrid Dense-Sparse Fusion for Vision-Language Retrieval",
+      "tags": ["ML", "Computer Vision", "NLP"],
+      "summary": "Engineered two-stage architecture integrating CLIP embeddings with TF-IDF sparse features, achieving 98.7% Recall@10 on MS-COCO dataset.",
+      "highlights": [
+        "Achieved 98.7% Recall@10 on MS-COCO through training-free query-conditioned reranking",
+        "Optimised FAISS indexing: 280+ QPS throughput with 6ms latency for 100K+ images",
+        "Statistical validation: p<0.01, Cohen's d=2.20 through FAIR-LOO protocol"
+      ],
+      "links": {
+        "repo": "",
+        "demo": "",
+        "report": ""
+      }
+    },
+    {
+      "title": "Real-Time Credit Card Fraud Detection",
+      "tags": ["ML", "Real-time", "Financial"],
+      "summary": "Built Random Forest classifier achieving 94% recall at 2% FPR on 284K transactions with Kafka streaming pipeline processing 500+ TPS.",
+      "highlights": [
+        "Random Forest classifier: 94% recall at 2% false positive rate on 284K transactions",
+        "Kafka streaming pipeline processing 500+ transactions per second with sub-second alerts",
+        "Reduced false positives by 83% using SMOTE balancing technique"
+      ],
+      "links": {
+        "repo": "",
+        "demo": "",
+        "report": ""
+      }
+    },
+    {
+      "title": "AI-Powered Brain Tumour Detection System",
+      "tags": ["Deep Learning", "Computer Vision", "Healthcare"],
+      "summary": "Developed CNN achieving 92% accuracy on 3,000+ MRI scans with 88% localisation precision, reducing radiologist review time by 30%.",
+      "highlights": [
+        "CNN achieving 92% accuracy on 3,000+ MRI scans with 88% localisation precision",
+        "Reduced radiologist review time by 30% through automated preprocessing",
+        "Deployed real-time inference system for clinical workflow integration"
+      ],
+      "links": {
+        "repo": "",
+        "demo": "",
+        "report": ""
+      }
+    },
+    {
+      "title": "YOLOv8 Waste Classification for Smart Cities",
+      "tags": ["Computer Vision", "IoT", "Smart Cities"],
+      "summary": "Developed YOLOv8 waste classification model achieving 95% mAP for Smart Cities Mission with real-time API handling 1,000+ requests/minute.",
+      "highlights": [
+        "YOLOv8 waste classification model achieving 95% mean Average Precision",
+        "Enhanced model precision by 8% through transfer learning on 50,000+ annotated images",
+        "Deployed real-time API handling 1,000+ requests/minute integrated with municipal dashboard"
+      ],
+      "links": {
+        "repo": "",
+        "demo": "",
+        "report": ""
+      }
+    }
+  ],
+  "experience": [
+    {
+      "company": "Solcielo Innovacion",
+      "title": "Lead Data Scientist & Co-founder",
+      "dates": "Apr 2023 – Sep 2024",
+      "location": "Remote",
+      "bullets": [
+        "Co-founded AI/ML consultancy delivering secure, compliant, production solutions to enterprise clients",
+        "Led cross-functional team of 6 engineers implementing Agile methodologies with 2-week sprint cycles",
+        "Architected ML pipelines processing 10,000+ daily predictions with 99.9% uptime SLA on AWS",
+        "Reduced model deployment time by 71% (7 to 2 days) through CI/CD automation"
+      ]
+    },
+    {
+      "company": "Indian Institute of Technology Bombay",
+      "title": "Machine Learning Research Intern",
+      "dates": "Dec 2023 – Mar 2024",
+      "location": "Remote",
+      "bullets": [
+        "Developed YOLOv8 waste classification model achieving 95% mAP for Smart Cities Mission",
+        "Enhanced model precision by 8% through transfer learning on 50,000+ annotated images",
+        "Deployed real-time API handling 1,000+ requests/minute integrated with municipal dashboard"
+      ]
+    },
+    {
+      "company": "Floxus",
+      "title": "Data Science Intern",
+      "dates": "May 2023 – Aug 2023",
+      "location": "Remote",
+      "bullets": [
+        "Built XGBoost/LightGBM ensemble improving sales forecast accuracy from 22% to 87%",
+        "Engineered 40+ features through comprehensive EDA achieving R² of 0.87",
+        "Deployed FastAPI microservices with sub-200ms response times"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Queen Mary University of London",
+      "degree": "Master of Science in Big Data Science",
+      "dates": "Sep 2024 – Present",
+      "location": "London, UK"
+    },
+    {
+      "school": "Birla Institute of Technology Mesra",
+      "degree": "Bachelor of Science (Honours) in Quantitative Economics and Data Science",
+      "dates": "Jul 2021 – May 2024",
+      "location": "Ranchi, India",
+      "note": "First Class with Distinction"
+    }
+  ],
+  "certifications": [
+    "Google Data Analytics Professional Certificate",
+    "Machine Learning Specialisation – Stanford University",
+    "Big Data Technologies: Hadoop, Spark & Analytics",
+    "Introduction to Data Analytics – IBM"
+  ],
+  "achievements": [
+    "All India Rank 1108 (Top 0.5%) in Code Kaze among 250,000+ candidates (2023)",
+    "Winner: National Hackathon IIIT Ranchi (2023)",
+    "1st Runner-up: KAVACH-2023 Cybersecurity Hackathon by Ministry of Home Affairs",
+    "1st Runner-up: Society for Data Science Hackathon (2023)",
+    "Codeforces: Rating 1156, International Rank 3627 in Division 2"
+  ]
+}
