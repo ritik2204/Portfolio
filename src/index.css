@@ -129,17 +129,47 @@ All colors MUST be HSL.
   ::-webkit-scrollbar {
     width: 8px;
   }
-  
+
   ::-webkit-scrollbar-track {
     background: hsl(var(--background));
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background: hsl(var(--accent));
     border-radius: 4px;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--accent) / 0.8);
+  }
+
+  /* Enhanced animations */
+  @keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+
+  /* Data visualization styles */
+  .data-point {
+    transition: all 0.3s ease;
+  }
+
+  .data-point:hover {
+    transform: scale(1.2);
+    filter: brightness(1.4);
+  }
+
+  /* Enhanced glow effects */
+  .glow-on-hover {
+    transition: all 0.3s ease;
+  }
+
+  .glow-on-hover:hover {
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.4);
   }
 }
