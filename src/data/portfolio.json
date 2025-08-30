@@ -13,7 +13,7 @@
       "resume_pdf": "/resume.pdf"
     }
   },
-  "summary": "My journey has taken me from co-founding an AI consultancy that generated revenue from day one, to researching cutting-edge vision-language models at Queen Mary University of London. Along the way, I've had the privilege of working with organizations like IIT Bombay, deploying models that classify waste for India's Smart Cities Mission with 95% accuracy. But what truly drives me isn't just the technology—it's the impact. Whether it's reducing fraud detection false positives by 83% (saving companies thousands), or cutting radiologist review time by 30% through AI-powered tumor detection, I measure success by the real-world difference my solutions make. Today, as I pursue my MSc in Big Data Science, I'm exploring the frontiers of hybrid dense-sparse fusion for vision-language retrieval, pushing the boundaries of what's possible when computer vision meets natural language processing. Ready to explore how data science can transform your challenges into opportunities? Let's connect.",
+  "summary": "My journey has taken me from co-founding an AI consultancy that generated revenue from day one, to researching cutting-edge vision-language models at Queen Mary University of London. Along the way, I've had the privilege of working with organizations like IIT Bombay, deploying models that classify waste for India's Smart Cities Mission with 95% accuracy. But what truly drives me isn't just the technology - it's the impact. Whether it's reducing fraud detection false positives by 83% (saving companies thousands), or cutting radiologist review time by 30% through AI-powered tumor detection, I measure success by the real-world difference my solutions make. Today, as I pursue my MSc in Big Data Science, I'm exploring the frontiers of hybrid dense-sparse fusion for vision-language retrieval, pushing the boundaries of what's possible when computer vision meets natural language processing. Ready to explore how data science can transform your challenges into opportunities? Let's connect.",
   "skills": {
     "programming": ["Python", "R", "SQL", "C++", "JavaScript"],
     "ml": ["TensorFlow", "PyTorch", "Scikit-learn", "XGBoost", "LightGBM", "YOLO", "CLIP", "Transformers"],
@@ -143,6 +143,7 @@
   ],
   "achievements": [
     "All India Rank 1108 (Top 0.5%) in Code Kaze among 250,000+ candidates (2023)",
+    "JEE Mains 2021 Qualified with Category Rank 22,340 among 1.5 million candidates",
     "Winner: National Hackathon IIIT Ranchi (2023)",
     "1st Runner-up: KAVACH-2023 Cybersecurity Hackathon by Ministry of Home Affairs",
     "1st Runner-up: Society for Data Science Hackathon (2023)",

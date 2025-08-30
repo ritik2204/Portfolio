@@ -6,7 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import portfolioData from "@/data/portfolio.json";
 import Experience from "./Experience";
 import DataVisualization from "./DataVisualization";
-import MetricsVisualization from "./MetricsVisualization";
+import ScholasticAchievements from "./ScholasticAchievements";
+import CodeVisualization from "./CodeVisualization";
 import InteractiveSkillsMap from "./InteractiveSkillsMap";
 import { Link } from "react-router-dom";
 
@@ -48,8 +49,8 @@ const Hero = () => {
           <Experience />
         </div>
         
-        {/* Additional Data Visualization Layer */}
-        <div className="absolute inset-0 z-0 opacity-60">
+        {/* Additional Data Visualization Layer - Reduced opacity for better text visibility */}
+        <div className="absolute inset-0 z-0 opacity-20">
           <DataVisualization />
         </div>
         
@@ -87,7 +88,7 @@ const Hero = () => {
                   transition={{ duration: 2, repeat: Infinity }}
                   className="text-accent"
                 >
-                  📊
+                  <CodeVisualization />
                 </motion.div>
               </h2>
               
@@ -206,7 +207,7 @@ const Hero = () => {
         </div>
       </section>
 
-      {/* Enhanced Metrics Section */}
+      {/* Scholastic Achievements Section */}
       <section className="py-20 bg-gradient-to-r from-accent/5 via-primary/5 to-accent/5">
         <div className="container mx-auto px-6">
           <motion.div
@@ -217,13 +218,13 @@ const Hero = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-accent bg-clip-text text-transparent">
-              Impact by Numbers
+              Scholastic Achievements
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Real-world results from data science projects that make a difference
+              Academic excellence and competitive programming accomplishments
             </p>
           </motion.div>
-          <MetricsVisualization />
+          <ScholasticAchievements />
         </div>
       </section>
 
