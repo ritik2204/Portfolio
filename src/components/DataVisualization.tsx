@@ -63,57 +63,56 @@ function DataNodes() {
   );
 }
 
-// Neural network connections
-function NeuralConnections() {
-  const ref = useRef<THREE.Group>(null!);
-  
+// Simplified floating shapes
+function FloatingShapes() {
+  const meshRef1 = useRef<THREE.Mesh>(null!);
+  const meshRef2 = useRef<THREE.Mesh>(null!);
+  const meshRef3 = useRef<THREE.Mesh>(null!);
+
   useFrame((state) => {
-    if (ref.current) {
-      ref.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.1) * 0.2;
+    if (meshRef1.current) {
+      meshRef1.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.3) * 0.2;
+      meshRef1.current.rotation.y = state.clock.elapsedTime * 0.1;
+    }
+    if (meshRef2.current) {
+      meshRef2.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.2) * 0.3;
+      meshRef2.current.rotation.z = state.clock.elapsedTime * 0.15;
+    }
+    if (meshRef3.current) {
+      meshRef3.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.25) * 0.1;
+      meshRef3.current.rotation.x = state.clock.elapsedTime * 0.05;
     }
   });
 
-  const connections = useMemo(() => {
-    const lines = [];
-    for (let i = 0; i < 20; i++) {
-      const start = new THREE.Vector3(
-        (Math.random() - 0.5) * 8,
-        (Math.random() - 0.5) * 4,
-        (Math.random() - 0.5) * 4
-      );
-      const end = new THREE.Vector3(
-        (Math.random() - 0.5) * 8,
-        (Math.random() - 0.5) * 4,
-        (Math.random() - 0.5) * 4
-      );
-      lines.push({ start, end });
-    }
-    return lines;
-  }, []);
-
   return (
-    <group ref={ref}>
-      {connections.map((connection, index) => (
-        <line key={index}>
-          <bufferGeometry>
-            <bufferAttribute
-              attach="attributes-position"
-              count={2}
-              array={new Float32Array([
-                connection.start.x, connection.start.y, connection.start.z,
-                connection.end.x, connection.end.y, connection.end.z
-              ])}
-              itemSize={3}
-            />
-          </bufferGeometry>
-          <lineBasicMaterial 
-            color="#4F46E5" 
-            transparent 
-            opacity={0.2} 
-            linewidth={1}
-          />
-        </line>
-      ))}
+    <group>
+      <mesh ref={meshRef1} position={[3, 2, -2]}>
+        <icosahedronGeometry args={[0.3]} />
+        <meshPhongMaterial 
+          color="#4F46E5" 
+          transparent 
+          opacity={0.6} 
+          wireframe 
+        />
+      </mesh>
+      <mesh ref={meshRef2} position={[-3, -1, 1]}>
+        <octahedronGeometry args={[0.4]} />
+        <meshPhongMaterial 
+          color="#7C3AED" 
+          transparent 
+          opacity={0.5} 
+          wireframe 
+        />
+      </mesh>
+      <mesh ref={meshRef3} position={[0, 2, -3]}>
+        <dodecahedronGeometry args={[0.35]} />
+        <meshPhongMaterial 
+          color="#EC4899" 
+          transparent 
+          opacity={0.4} 
+          wireframe 
+        />
+      </mesh>
     </group>
   );
 }
@@ -131,38 +130,7 @@ const DataVisualization = () => {
         <pointLight position={[-10, -10, -10]} intensity={0.4} color="#7C3AED" />
         
         <DataNodes />
-        <NeuralConnections />
-        
-        {/* Floating geometric shapes */}
-        <group>
-          <mesh position={[3, 2, -2]}>
-            <icosahedronGeometry args={[0.3]} />
-            <meshPhongMaterial 
-              color="#4F46E5" 
-              transparent 
-              opacity={0.6} 
-              wireframe 
-            />
-          </mesh>
-          <mesh position={[-3, -1, 1]}>
-            <octahedronGeometry args={[0.4]} />
-            <meshPhongMaterial 
-              color="#7C3AED" 
-              transparent 
-              opacity={0.5} 
-              wireframe 
-            />
-          </mesh>
-          <mesh position={[0, 2, -3]}>
-            <dodecahedronGeometry args={[0.35]} />
-            <meshPhongMaterial 
-              color="#EC4899" 
-              transparent 
-              opacity={0.4} 
-              wireframe 
-            />
-          </mesh>
-        </group>
+        <FloatingShapes />
       </Canvas>
     </div>
   );
