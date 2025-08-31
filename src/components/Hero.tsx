@@ -89,13 +89,6 @@ const Hero = () => {
                   🧠
                 </motion.div>
                 {portfolioData.role}
-                <motion.div
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="text-accent"
-                >
-                  <CodeVisualization />
-                </motion.div>
               </h2>
               
               <div className="max-w-5xl mx-auto mb-12">
@@ -123,6 +116,20 @@ const Hero = () => {
                     Get in Touch
                   </Link>
                 </Button>
+              </motion.div>
+
+              {/* Animated Code Editor */}
+              <motion.div
+                variants={itemVariants}
+                className="flex justify-center mb-8"
+              >
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                  className="text-accent"
+                >
+                  <CodeVisualization />
+                </motion.div>
               </motion.div>
 
               <motion.div

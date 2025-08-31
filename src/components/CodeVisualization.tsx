@@ -29,7 +29,7 @@ const CodeVisualization = () => {
   }, []);
 
   return (
-    <div className="relative w-24 h-16 bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 overflow-hidden ml-4">
+    <div className="relative w-64 h-40 bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 overflow-hidden">
       {/* Terminal header */}
       <div className="flex items-center gap-2 px-4 py-2 bg-accent/10 border-b border-border/30">
         <div className="w-3 h-3 rounded-full bg-red-400"></div>
