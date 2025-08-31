@@ -29,7 +29,7 @@ const CodeVisualization = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-32 bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 overflow-hidden">
+    <div className="relative w-24 h-16 bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 overflow-hidden ml-4">
       {/* Terminal header */}
       <div className="flex items-center gap-2 px-4 py-2 bg-accent/10 border-b border-border/30">
         <div className="w-3 h-3 rounded-full bg-red-400"></div>
@@ -38,35 +38,15 @@ const CodeVisualization = () => {
         <span className="text-xs text-muted-foreground ml-2">data_science.py</span>
       </div>
       
-      {/* Code content */}
-      <div className="p-4 font-mono text-xs overflow-hidden">
-        {codeLines.slice(0, visibleLines).map((line, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="leading-5"
-          >
-            <span className="text-muted-foreground mr-3">{String(index + 1).padStart(2, '0')}</span>
-            <span className={`
-              ${line.startsWith('import') || line.startsWith('from') ? 'text-blue-400' : ''}
-              ${line.startsWith('#') ? 'text-green-400' : ''}
-              ${line.includes('def ') ? 'text-purple-400' : ''}
-              ${line.includes('=') && !line.startsWith('#') ? 'text-yellow-400' : ''}
-              ${!line.startsWith('#') && !line.startsWith('import') && !line.startsWith('from') && !line.includes('def ') ? 'text-foreground' : ''}
-            `}>
-              {line || '\u00A0'}
-            </span>
-          </motion.div>
-        ))}
-        
-        {/* Typing cursor */}
+      {/* Simplified code icon */}
+      <div className="p-2 flex items-center justify-center h-full">
         <motion.div
-          animate={{ opacity: [1, 0, 1] }}
-          transition={{ duration: 1, repeat: Infinity }}
-          className="inline-block w-2 h-4 bg-accent ml-1"
-        />
+          animate={{ rotate: [0, 5, -5, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="text-accent text-lg"
+        >
+          &lt;/&gt;
+        </motion.div>
       </div>
       
       {/* Floating code elements */}

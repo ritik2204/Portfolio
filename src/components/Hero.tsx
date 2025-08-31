@@ -9,6 +9,9 @@ import DataVisualization from "./DataVisualization";
 import ScholasticAchievements from "./ScholasticAchievements";
 import CodeVisualization from "./CodeVisualization";
 import InteractiveSkillsMap from "./InteractiveSkillsMap";
+import TypingAnimation from "./TypingAnimation";
+import FloatingAvatar from "./FloatingAvatar";
+import ProjectCards3D from "./ProjectCards3D";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -43,6 +46,9 @@ const Hero = () => {
 
   return (
     <div className="relative">
+      {/* Floating Avatar */}
+      <FloatingAvatar />
+      
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-accent/5">
         {/* Enhanced 3D Background */}
         <div className="absolute inset-0 z-0">
@@ -50,7 +56,7 @@ const Hero = () => {
         </div>
         
         {/* Additional Data Visualization Layer - Reduced opacity for better text visibility */}
-        <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute inset-0 z-0 opacity-10">
           <DataVisualization />
         </div>
         
@@ -92,14 +98,13 @@ const Hero = () => {
                 </motion.div>
               </h2>
               
-              <motion.p 
-                className="text-lg md:text-xl text-muted-foreground max-w-5xl mx-auto mb-12 leading-relaxed"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-              >
-                {portfolioData.summary}
-              </motion.p>
+              <div className="max-w-5xl mx-auto mb-12">
+                <TypingAnimation 
+                  text={portfolioData.summary}
+                  className="text-lg md:text-xl leading-relaxed text-center"
+                  speed={30}
+                />
+              </div>
 
               <motion.div
                 variants={itemVariants}
@@ -225,6 +230,27 @@ const Hero = () => {
             </p>
           </motion.div>
           <ScholasticAchievements />
+        </div>
+      </section>
+
+      {/* 3D Projects Section */}
+      <section className="py-20 bg-gradient-to-br from-background via-accent/5 to-background">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-accent bg-clip-text text-transparent">
+              Featured Projects
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Cutting-edge AI/ML solutions with real-world impact
+            </p>
+          </motion.div>
+          <ProjectCards3D />
         </div>
       </section>
 
