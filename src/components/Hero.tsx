@@ -12,6 +12,7 @@ import InteractiveSkillsMap from "./InteractiveSkillsMap";
 import TypingAnimation from "./TypingAnimation";
 import FloatingAvatar from "./FloatingAvatar";
 import ProjectCards3D from "./ProjectCards3D";
+import AnimatedManAvatar from "./AnimatedManAvatar";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -48,6 +49,9 @@ const Hero = () => {
     <div className="relative">
       {/* Floating Avatar */}
       <FloatingAvatar />
+      
+      {/* Animated Man Avatar looking for job */}
+      <AnimatedManAvatar />
       
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-accent/5">
         {/* Enhanced 3D Background */}

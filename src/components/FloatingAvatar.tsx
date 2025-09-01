@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import profilePhoto from "@/assets/profile-photo.png";
+import AnimatedAvatar from "./AnimatedAvatar";
 
 const FloatingAvatar = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -70,9 +71,9 @@ const FloatingAvatar = () => {
             }}
           />
           
-          {/* Fallback avatar */}
-          <div className="w-full h-full bg-gradient-to-br from-accent to-primary flex items-center justify-center text-4xl font-bold text-white" style={{display: 'none'}}>
-            RK
+          {/* Fallback animated avatar */}
+          <div className="w-full h-full" style={{display: 'none'}}>
+            <AnimatedAvatar />
           </div>
           
           {/* Overlay gradient */}
